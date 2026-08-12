@@ -1,9 +1,10 @@
 // ── Config
-const DATA_VERSION  = '8';
+const DATA_VERSION  = '9';
 const GITHUB_REPO   = 'sdasadadsa/asdsadasdasd';
 const RAW_FIXED_URL = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/fixed.json?t=${Date.now()}`;
 const RAW_DATA_URL  = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/data.json?t=${Date.now()}`;
-const FN_URL        = '/.netlify/functions/toggle-fixed';
+const FN_FIXED_URL  = '/.netlify/functions/toggle-fixed';
+const FN_ADD_URL    = '/.netlify/functions/add-vuln';
 
 // ── State
 let nick         = '';
@@ -13,6 +14,7 @@ let activeSite   = 'all';
 let activeStatus = 'all';
 let selectedSeverity = 'critical';
 let toggling     = false;
+let adding       = false;
 
 // ── Init
 window.addEventListener('DOMContentLoaded', async () => {
@@ -30,13 +32,19 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadVulns() {
-  const stored = localStorage.getItem('vt_vulns');
-  if (stored) { try { vulns = JSON.parse(stored); return; } catch {} }
   try {
     const r = await fetch(RAW_DATA_URL());
+    if (!r.ok) throw new Error('fetch failed');
     vulns = await r.json();
     localStorage.setItem('vt_vulns', JSON.stringify(vulns));
-  } catch { vulns = []; }
+  } catch {
+    const stored = localStorage.getItem('vt_vulns');
+    if (stored) {
+      try { vulns = JSON.parse(stored); } catch { vulns = []; }
+    } else {
+      vulns = [];
+    }
+  }
 }
 
 async function loadFixed() {
@@ -118,7 +126,8 @@ function closeAddModal() {
   selectedSeverity = 'critical';
 }
 
-function submitVuln() {
+async function submitVuln() {
+  if (adding) return;
   const site  = document.getElementById('form-site').value;
   const title = document.getElementById('form-title').value.trim();
   const desc  = document.getElementById('form-desc').value.trim();
@@ -129,17 +138,39 @@ function submitVuln() {
     setTimeout(() => { inp.style.borderColor = ''; }, 1500);
     return;
   }
-  const v = {
-    id: Date.now(), site, title,
-    description: desc,
-    severity: selectedSeverity,
-    date: new Date().toISOString().split('T')[0],
-    addedBy: nick
-  };
-  vulns.unshift(v);
-  localStorage.setItem('vt_vulns', JSON.stringify(vulns));
-  closeAddModal();
-  render();
+
+  adding = true;
+  const btn = document.getElementById('form-submit');
+  const prevText = btn.textContent;
+  btn.textContent = 'Сохранение...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(FN_ADD_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        site,
+        title,
+        description: desc,
+        severity: selectedSeverity,
+        addedBy: nick
+      })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'save failed');
+
+    vulns = data.list || [data.vuln, ...vulns];
+    localStorage.setItem('vt_vulns', JSON.stringify(vulns));
+    closeAddModal();
+    render();
+  } catch (e) {
+    alert('Не удалось сохранить для всех. Проверь GITHUB_TOKEN на Netlify.\n' + (e.message || ''));
+  }
+
+  btn.textContent = prevText;
+  btn.disabled = false;
+  adding = false;
 }
 
 // ── Toggle fixed (global via Netlify Function)
@@ -151,7 +182,6 @@ async function toggleFixed(id) {
   const isFixed = !!fixedMap[key];
   const action  = isFixed ? 'unfix' : 'fix';
 
-  // Optimistic update
   const prev = Object.assign({}, fixedMap);
   if (action === 'fix') {
     fixedMap[key] = { nick, date: new Date().toISOString().split('T')[0] };
@@ -161,7 +191,7 @@ async function toggleFixed(id) {
   render();
 
   try {
-    const res = await fetch(FN_URL, {
+    const res = await fetch(FN_FIXED_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id, nick, action })
