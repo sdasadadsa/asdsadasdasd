@@ -1,50 +1,5 @@
 [
   {
-    "id": 1786547330053,
-    "site": "Sleeva",
-    "title": "asdasdasdas",
-    "description": "dsadasd",
-    "severity": "medium",
-    "date": "2026-08-12",
-    "addedBy": "asdsadsad"
-  },
-  {
-    "id": 1786547123434,
-    "site": "Megacase",
-    "title": "cache-diag-1786547125",
-    "description": "diag",
-    "severity": "low",
-    "date": "2026-08-12",
-    "addedBy": "diag"
-  },
-  {
-    "id": 1786547054199,
-    "site": "Sleeva",
-    "title": "asdasdasd",
-    "description": "asdasdasd",
-    "severity": "critical",
-    "date": "2026-08-12",
-    "addedBy": "asdsadsad"
-  },
-  {
-    "id": 1786547028467,
-    "site": "Sleeva",
-    "title": "asdasdasd",
-    "description": "sadsadasd",
-    "severity": "critical",
-    "date": "2026-08-12",
-    "addedBy": "asdsadsad"
-  },
-  {
-    "id": 1786547012256,
-    "site": "Sleeva",
-    "title": "test",
-    "description": "ettes",
-    "severity": "critical",
-    "date": "2026-08-12",
-    "addedBy": "asdsadsad"
-  },
-  {
     "id": 107,
     "site": "Megacase",
     "title": "новый вектор",
