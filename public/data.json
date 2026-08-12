@@ -1,5 +1,14 @@
 [
   {
+    "id": 1786547592089,
+    "site": "Megacase",
+    "title": "/api/statistics?userId=",
+    "description": "get /api/statistics?userId=1 (ставим любой айди) утекает сумма депозитов и сумма выводов . так можно парсить данные с сайта и так же идет нагрузка . прошу закрыть данный вектор",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 107,
     "site": "Megacase",
     "title": "новый вектор",
