@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Megacase &amp; Sleeva</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Экран ввода ника -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="logo">Megacase &amp; Sleeva</div>
+      <input id="nick-input" type="text" placeholder="User" maxlength="32" />
+      <button id="nick-btn" class="btn-primary">Продолжить</button>
+    </div>
+  </div>
+
+  <!-- Основной экран -->
+  <div id="main-screen" class="main-screen hidden">
+
+    <header class="header">
+      <div class="header-left">
+        <span class="logo-small">Megacase &amp; Sleeva</span>
+      </div>
+      <div class="header-right">
+        <button id="add-btn" class="btn-primary">+ Добавить</button>
+      </div>
+    </header>
+
+    <!-- Фильтры по сайту -->
+    <div class="filters">
+      <div class="site-tabs">
+        <button class="site-tab active" data-site="all">Все сайты</button>
+        <button class="site-tab" data-site="Sleeva">Sleeva</button>
+        <button class="site-tab" data-site="Megacase">Megacase</button>
+      </div>
+      <div class="status-tabs">
+        <button class="status-tab active" data-status="all">Все</button>
+        <button class="status-tab" data-status="open">Открытые</button>
+        <button class="status-tab" data-status="fixed">Исправленные</button>
+      </div>
+    </div>
+
+    <!-- Счётчики -->
+    <div class="stats">
+      <span class="stat-item"><span id="count-all">0</span> всего</span>
+      <span class="stat-sep">·</span>
+      <span class="stat-item open-color"><span id="count-open">0</span> открытых</span>
+      <span class="stat-sep">·</span>
+      <span class="stat-item fixed-color"><span id="count-fixed">0</span> исправлено</span>
+    </div>
+
+    <!-- Список уязвимостей -->
+    <div id="vuln-list" class="vuln-list">
+      <div class="loading">Загрузка...</div>
+    </div>
+
+  </div>
+
+  <!-- Модалка добавления уязвимости -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Добавить уязвимость</h2>
+        <button id="modal-close" class="modal-close">&#10005;</button>
+      </div>
+
+      <label>Сайт</label>
+      <select id="form-site">
+        <option value="Sleeva">Sleeva</option>
+        <option value="Megacase">Megacase</option>
+      </select>
+
+      <label>Название</label>
+      <input id="form-title" type="text" placeholder="Название" />
+
+      <label>Описание</label>
+      <textarea id="form-desc" placeholder="Подробнее об уязвимости..."></textarea>
+
+      <label>Критичность</label>
+      <div class="severity-picker">
+        <button class="sev-btn active" data-sev="critical">Critical</button>
+        <button class="sev-btn" data-sev="high">High</button>
+        <button class="sev-btn" data-sev="medium">Medium</button>
+        <button class="sev-btn" data-sev="low">Low</button>
+      </div>
+
+      <button id="form-submit" class="btn-primary full">Добавить</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

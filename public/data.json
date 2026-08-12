@@ -1,0 +1,245 @@
+[
+  {
+    "id": 101,
+    "site": "Megacase",
+    "title": "/api/auth/email/signup дудосс вектор",
+    "description": "принимает пароль и можно через пост отправлять запросы, будет нагружаться сервер",
+    "severity": "high",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 102,
+    "site": "Sleeva",
+    "title": "sleeva.com/api/ вектор открыт",
+    "description": "sleeva.com/api/ вектор открыт",
+    "severity": "high",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 103,
+    "site": "Megacase",
+    "title": "megacase.ai/api/ref/validate открыт без авторизации и без лимита",
+    "description": "открыт без авторизации и без лимита, так же дудосс вектор",
+    "severity": "high",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 104,
+    "site": "Megacase",
+    "title": "GET megacase.ai/api/live-drop открыт без авторизации",
+    "description": "метод гет стоит закрыть т.к это тоже вектор дудосса на мегакейсе",
+    "severity": "high",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 105,
+    "site": "Sleeva",
+    "title": "sleeva.com открыты эндпоинты /api/casino/ /api/payments/ /api/auth/email/ /api/casino/user/balance",
+    "description": "/api/casino/ /api/payments/ /api/auth/email/ /api/casino/user/balance открыты эндпоинты",
+    "severity": "high",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 106,
+    "site": "Megacase",
+    "title": "megacase sso сессионные куки раскрывают внутреннюю структуру",
+    "description": "sso.sid connect.sid sso_state sessionid, steamcountury",
+    "severity": "medium",
+    "date": "2026-08-04",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 1,
+    "site": "Sleeva",
+    "title": "jwt algorithm disclosure на /api/casino/user/balance",
+    "description": "разные alg в bearer - разные ошибки. none пишет signature is missing, hs256 с фейк hmac пишет algorithm is invalid. по тексту ошибок понятно что сервер реально принимает и как валидирует",
+    "severity": "critical",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 2,
+    "site": "Sleeva",
+    "title": "surrealdb injection в password на signup",
+    "description": "post /api/auth/email/signup тащит password в surrealdb. test123 - 400 password too short, or 1=1 - 400 noscript, union select - 403 waiting for confirm. create/select/define function иногда 201. poc с return array group select email from user тоже 201 ok. если define function реально встала в бд - это уже жесть",
+    "severity": "critical",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 3,
+    "site": "Sleeva",
+    "title": "/api/casino/play/demo обрабатывает до проверки авторизации",
+    "description": "без токена: кривой gameid - 400 invalid game id, нормальный uuid из каталога - 400 internal server error вместо 403. сервер лезет в demo сессию и падает внутри, в traceparent видно что запрос реально крутится",
+    "severity": "high",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 4,
+    "site": "Sleeva",
+    "title": "patch /api/casino/user/settings/username отдает 404",
+    "description": "в бандле маршрут есть, на бэке route not found. ник через api не поменять, но фронт и бэк расходятся",
+    "severity": "high",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 5,
+    "site": "Sleeva",
+    "title": "потенциальный idor на балансе через userid в query",
+    "description": "get /api/casino/user/balance?userid=X параметр принимается. без токена 403, но с валидным jwt надо чекнуть чужой userid - если отдаст чужой баланс то idor",
+    "severity": "high",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 6,
+    "site": "Sleeva",
+    "title": "get /api/payments/crypto/methods без авторизации",
+    "description": "отдает все крипто методы - сети, мин суммы, withdrawal флаги. curl https://sleeva.com/api/payments/crypto/methods",
+    "severity": "high",
+    "date": "2026-06-13",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 7,
+    "site": "Sleeva",
+    "title": "get /api/auth/steam/return обрабатывает openid параметры без проверки авторизации",
+    "description": "через get /api/auth/steam/return полностью обрабатывает openid параметры без предварительной проверки авторизации пользователя",
+    "severity": "high",
+    "date": "2026-06-12",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 8,
+    "site": "Sleeva",
+    "title": "полная карта backend api из js бандла - 30 маршрутов",
+    "description": "1k50m996cfj4c.js раскрывает апи пути включая финансовые",
+    "severity": "high",
+    "date": "2026-06-12",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 9,
+    "site": "Sleeva",
+    "title": "/api/casino/games/search работает без авторизации",
+    "description": "именно через апи без авторизации работает",
+    "severity": "high",
+    "date": "2026-06-12",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 10,
+    "site": "Sleeva",
+    "title": "surrealdb injection подтверждена password field noscript",
+    "description": "поле password при post /api/auth/email/signup напрямую попадает в surrealdb запрос без sanitization. это подтверждается ошибкой surrealdb: разные injection дают разные ответы. password=wildchair - 400 password too short validation, password=or 1=1 - 400 noscript surrealdb error, password=union select - 403 waiting for email confirm (different code path). изменение кода ответа при union означает что запрос частично выполняется и меняет логику аутентификации. требует авторизованного аккаунта для полного exploita через /api/casino/user/settings/username",
+    "severity": "high",
+    "date": "2026-06-12",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 11,
+    "site": "Sleeva",
+    "title": "/api/casino/games публичный доступ к полному каталогу игр",
+    "description": "get /api/casino/games возвращает полный каталог всех игр без авторизации включая параметры rtp",
+    "severity": "high",
+    "date": "2026-06-11",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 12,
+    "site": "Sleeva",
+    "title": "opentelemetry traceparent header в каждом ответе",
+    "description": "все http ответы sleeva.com содержат заголовок traceparent с уникальными trace id и span id opentelemetry трассировки. пример: traceparent: 00-416e639fc598c16f49e537e608035fde-0c3213253d5c7027-01. риск: атакующий может коррелировать запросы, отслеживать внутренние цепочки вызовов микросервисов",
+    "severity": "high",
+    "date": "2026-06-11",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 13,
+    "site": "Sleeva",
+    "title": "get /api/casino/play/demo?gameid=valid_uuid возвращает 400 internal server error вместо 403",
+    "description": "при использовании реального uuid из каталога возвращает 400 an internal server error occurred вместо 403 authorization header is required. запрос у неавторизованного пользователя идет дальше чем просто краш",
+    "severity": "high",
+    "date": "2026-06-11",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 14,
+    "site": "Sleeva",
+    "title": "инвертированность призов в турнирах",
+    "description": "прошу проверить правильность - было увидено что в турнире 2-е место получает 175$ а 1-е 150$",
+    "severity": "medium",
+    "date": "2026-06-10",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 15,
+    "site": "Sleeva",
+    "title": "GET /api/casino/games/:uuid раскрывает данные",
+    "description": "давайте это заблокируем, но по сути больше информационно, но стоит убрать",
+    "severity": "medium",
+    "date": "2026-06-10",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 16,
+    "site": "Sleeva",
+    "title": "GET /api/casino/games/filters раскрывает полную структуру маршрутов",
+    "description": "curl https://sleeva.com/api/casino/games/filters",
+    "severity": "medium",
+    "date": "2026-06-10",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 17,
+    "site": "Sleeva",
+    "title": "GET /api/casino/tournaments/:id/leaderboard выдает данные без авторизации",
+    "description": "",
+    "severity": "medium",
+    "date": "2026-06-09",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 18,
+    "site": "Sleeva",
+    "title": "GET /api/casino/tournaments/history без авторизации",
+    "description": "полная история без авторизации работает. по сути это сделано для команды, не особо легально, тоже можно закрыть",
+    "severity": "medium",
+    "date": "2026-06-09",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 19,
+    "site": "Sleeva",
+    "title": "/api/payments/methods открыт",
+    "description": "закрыть, потому что вдруг туда будет что-либо добавляться, по типу тест методов",
+    "severity": "medium",
+    "date": "2026-06-09",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 20,
+    "site": "Sleeva",
+    "title": "через tanstack router найдены все апи маршруты",
+    "description": "sleeva.com: @post/auth/email/login, @post/auth/email/signup, @post/auth/email/recovery, @post/auth/steam, @post/auth/telegram, @get/casino/user/balance, @get/casino/user/history/deposits, @get/casino/user/history/slots, @post/payments/exchange, @post/casino/tournaments/, @post/casino/user/affiliate/transfer, @patch/casino/user/settings/password",
+    "severity": "medium",
+    "date": "2026-06-05",
+    "addedBy": "backd00r"
+  },
+  {
+    "id": 21,
+    "site": "Sleeva",
+    "title": "sql like символы в password вызывают ошибку",
+    "description": "бекенд использует surrealdb и sql like символы в password вызывают ошибку, прошу пофиксить",
+    "severity": "medium",
+    "date": "2026-06-05",
+    "addedBy": "backd00r"
+  }
+]
