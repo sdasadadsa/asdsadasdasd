@@ -1,6 +1,6 @@
 // ── Config
-const DATA_VERSION  = '7';
-const GITHUB_REPO   = 'brjidweoio/sadasddasdsa';
+const DATA_VERSION  = '8';
+const GITHUB_REPO   = 'sdasadadsa/asdsadasdasd';
 const RAW_FIXED_URL = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/fixed.json?t=${Date.now()}`;
 const RAW_DATA_URL  = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/data.json?t=${Date.now()}`;
 const FN_URL        = '/.netlify/functions/toggle-fixed';

@@ -1,5 +1,59 @@
 [
   {
+    "id": 107,
+    "site": "Megacase",
+    "title": "новый вектор",
+    "description": "новый вектор через post /api/get_roll дудос вектор не выдает ни одной ошибки , прошу пофиксить",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 108,
+    "site": "Megacase",
+    "title": "/api/market/items",
+    "description": "/api/market/items открыт без авторизации так же",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 109,
+    "site": "Megacase",
+    "title": "векторы",
+    "description": "curl https://megacase.ai/api/users/online curl https://megacase.ai/api/stat так же открыты без авторизации что является вектором для дудосса",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 110,
+    "site": "Megacase",
+    "title": "/api/health",
+    "description": "/api/health открыт без авторизации",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 111,
+    "site": "Megacase",
+    "title": "хэш git коммита утекают в каждом xhr запросе клиента",
+    "description": "в заголовке baggage каждого xhr от браузера содержится: публичный ключ bugsink (e7a4ef29a008493d9d708cb1a57acff9) хост thisisiriya.bugsink.com 306160c9df9da8efcfd26bb9dbd7ba1f911572dc baggage: sentry-environment=production, sentry-release=306160c9df9da8efcfd26bb9dbd7ba1f911572dc, sentry-public_key=e7a4ef29a008493d9d708cb1a57acff9, sentry-trace_id=c01b540fa9661ea3cdfbad49a0988388 ключ дает возможность засорять фейковыми событиями",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 112,
+    "site": "Megacase",
+    "title": "/api/csrf-token",
+    "description": "через get /api/csrf-token отдает токен без авторизации",
+    "severity": "medium",
+    "date": "2026-08-12",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 101,
     "site": "Megacase",
     "title": "/api/auth/email/signup дудосс вектор",
