@@ -1,10 +1,9 @@
 // ── Config
-const DATA_VERSION  = '9';
-const GITHUB_REPO   = 'sdasadadsa/asdsadasdasd';
-const RAW_FIXED_URL = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/fixed.json?t=${Date.now()}`;
-const RAW_DATA_URL  = () => `https://raw.githubusercontent.com/${GITHUB_REPO}/main/public/data.json?t=${Date.now()}`;
-const FN_FIXED_URL  = '/.netlify/functions/toggle-fixed';
-const FN_ADD_URL    = '/.netlify/functions/add-vuln';
+const DATA_VERSION   = '10';
+const FN_VULNS_URL   = '/.netlify/functions/get-vulns';
+const FN_FIXED_GET   = '/.netlify/functions/get-fixed';
+const FN_FIXED_URL   = '/.netlify/functions/toggle-fixed';
+const FN_ADD_URL     = '/.netlify/functions/add-vuln';
 
 // ── State
 let nick         = '';
@@ -18,10 +17,8 @@ let adding       = false;
 
 // ── Init
 window.addEventListener('DOMContentLoaded', async () => {
-  if (localStorage.getItem('vt_version') !== DATA_VERSION) {
-    localStorage.removeItem('vt_vulns');
-    localStorage.setItem('vt_version', DATA_VERSION);
-  }
+  localStorage.removeItem('vt_vulns'); // never trust stale local cache as source of truth
+  localStorage.setItem('vt_version', DATA_VERSION);
   nick = localStorage.getItem('vt_nick') || '';
 
   await Promise.all([loadVulns(), loadFixed()]);
@@ -33,24 +30,22 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 async function loadVulns() {
   try {
-    const r = await fetch(RAW_DATA_URL());
+    const r = await fetch(`${FN_VULNS_URL}?t=${Date.now()}`, { cache: 'no-store' });
     if (!r.ok) throw new Error('fetch failed');
     vulns = await r.json();
-    localStorage.setItem('vt_vulns', JSON.stringify(vulns));
+    if (!Array.isArray(vulns)) vulns = [];
   } catch {
-    const stored = localStorage.getItem('vt_vulns');
-    if (stored) {
-      try { vulns = JSON.parse(stored); } catch { vulns = []; }
-    } else {
-      vulns = [];
-    }
+    vulns = [];
   }
 }
 
 async function loadFixed() {
   try {
-    const r = await fetch(RAW_FIXED_URL());
-    if (r.ok) fixedMap = await r.json();
+    const r = await fetch(`${FN_FIXED_GET}?t=${Date.now()}`, { cache: 'no-store' });
+    if (r.ok) {
+      const data = await r.json();
+      fixedMap = data && typeof data === 'object' && !Array.isArray(data) ? data : {};
+    }
   } catch { fixedMap = {}; }
 }
 
@@ -161,7 +156,6 @@ async function submitVuln() {
     if (!res.ok) throw new Error(data.error || 'save failed');
 
     vulns = data.list || [data.vuln, ...vulns];
-    localStorage.setItem('vt_vulns', JSON.stringify(vulns));
     closeAddModal();
     render();
   } catch (e) {
