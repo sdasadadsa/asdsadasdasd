@@ -36,31 +36,48 @@ exports.handler = async (event) => {
     return { statusCode: 400, headers: cors, body: JSON.stringify({ error: 'Missing fields' }) };
   }
 
+  const vuln = {
+    id: Date.now(),
+    site,
+    title: String(title).trim(),
+    description: description ? String(description).trim() : '',
+    severity,
+    date: new Date().toISOString().split('T')[0],
+    addedBy: String(addedBy).trim()
+  };
+
   try {
-    const fileData = await githubGet(`/repos/${REPO}/contents/${FILE_PATH}`);
-    if (fileData.message) {
-      return { statusCode: 500, headers: cors, body: JSON.stringify({ error: fileData.message }) };
+    let lastError = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const fileData = await githubGet(`/repos/${REPO}/contents/${FILE_PATH}`);
+      if (fileData.message) {
+        return { statusCode: 500, headers: cors, body: JSON.stringify({ error: fileData.message }) };
+      }
+
+      const list = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf-8'));
+      // avoid duplicate if retry after partial success visibility
+      if (!list.some(v => v && v.id === vuln.id)) {
+        list.unshift(vuln);
+      }
+
+      const putRes = await githubPut(`/repos/${REPO}/contents/${FILE_PATH}`, {
+        message: `add vuln: ${vuln.title.slice(0, 60)}`,
+        content: Buffer.from(JSON.stringify(list, null, 2) + '\n').toString('base64'),
+        sha: fileData.sha
+      });
+
+      if (putRes.content && putRes.content.sha) {
+        return { statusCode: 200, headers: cors, body: JSON.stringify({ vuln, list }) };
+      }
+
+      // conflict / race — retry with fresh sha
+      lastError = putRes.message || JSON.stringify(putRes);
+      if (!(putRes.message || '').toLowerCase().includes('conflict') && putRes.message !== 'Not Found') {
+        break;
+      }
     }
 
-    const list = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf-8'));
-    const vuln = {
-      id: Date.now(),
-      site,
-      title: String(title).trim(),
-      description: description ? String(description).trim() : '',
-      severity,
-      date: new Date().toISOString().split('T')[0],
-      addedBy: String(addedBy).trim()
-    };
-    list.unshift(vuln);
-
-    await githubPut(`/repos/${REPO}/contents/${FILE_PATH}`, {
-      message: `add vuln: ${vuln.title.slice(0, 60)}`,
-      content: Buffer.from(JSON.stringify(list, null, 2) + '\n').toString('base64'),
-      sha: fileData.sha
-    });
-
-    return { statusCode: 200, headers: cors, body: JSON.stringify({ vuln, list }) };
+    return { statusCode: 500, headers: cors, body: JSON.stringify({ error: lastError || 'Failed to save' }) };
   } catch (e) {
     return { statusCode: 500, headers: cors, body: JSON.stringify({ error: e.message }) };
   }
