@@ -12,7 +12,7 @@
     "id": 1786990139535,
     "site": "Megacase",
     "title": "/api/deposit crypto/fk/p2p и др. дудосс векторы",
-    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer. get /api/deposit/crypto/options отдаёт весь каталог сетей, get /api/deposit/crypto/static-wallet?assetCode= выдает адрес — так же эти пути дудосс векторы",
+    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer. get /api/deposit/crypto/options отдаёт весь каталог сетей, get /api/deposit/crypto/static-wallet?assetCode= выдает адрес - так же эти пути дудосс векторы",
     "severity": "medium",
     "date": "2026-08-17",
     "addedBy": "asddasd"
