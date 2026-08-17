@@ -11,8 +11,8 @@
   {
     "id": 1786990139535,
     "site": "Megacase",
-    "title": "/api/deposit crypto/fk/p2p и др. дудосс векторы",
-    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer. get /api/deposit/crypto/options отдает весь каталог сетей, get /api/deposit/crypto/static-wallet?assetCode= выдает адрес - так же эти пути дудосс векторы",
+    "title": "/api/deposit crypto/fk/p2p и др дудосс векторы",
+    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer get /api/deposit/crypto/options отдает весь каталог сетей get /api/deposit/crypto/static-wallet?assetCode= выдает адрес - так же эти пути дудосс векторы",
     "severity": "medium",
     "date": "2026-08-17",
     "addedBy": "asddasd"
@@ -21,7 +21,7 @@
     "id": 1786990139536,
     "site": "Megacase",
     "title": "слабая проверка подписки на получение бонуса",
-    "description": "проверка подписки на получение бонуса слабая, из бандла отправил сам себе конфирм и получил без подписки",
+    "description": "проверка подписки на получение бонуса слабая из бандла отправил сам себе конфирм и получил без подписки",
     "severity": "medium",
     "date": "2026-08-17",
     "addedBy": "asddasd"
@@ -48,7 +48,7 @@
     "id": 1786547592089,
     "site": "Megacase",
     "title": "/api/statistics?userId=",
-    "description": "get /api/statistics?userId=1 (ставим любой айди) утекает сумма депозитов и сумма выводов . так можно парсить данные с сайта и так же идет нагрузка . прошу закрыть данный вектор",
+    "description": "get /api/statistics?userId=1 ставим любой айди утекает сумма депозитов и сумма выводов так можно парсить данные с сайта и так же идет нагрузка прошу закрыть данный вектор",
     "severity": "medium",
     "date": "2026-08-12",
     "addedBy": "asddasd"
@@ -57,7 +57,7 @@
     "id": 107,
     "site": "Megacase",
     "title": "новый вектор",
-    "description": "новый вектор через post /api/get_roll дудос вектор не выдает ни одной ошибки , прошу пофиксить",
+    "description": "новый вектор через post /api/get_roll дудос вектор не выдает ни одной ошибки прошу пофиксить",
     "severity": "medium",
     "date": "2026-08-12",
     "addedBy": "asddasd"
@@ -75,7 +75,7 @@
     "id": 109,
     "site": "Megacase",
     "title": "векторы",
-    "description": "curl https://megacase.ai/api/users/online curl https://megacase.ai/api/stat так же открыты без авторизации что является вектором для дудосса",
+    "description": "curl https //megacase.ai/api/users/online curl https //megacase.ai/api/stat так же открыты без авторизации что является вектором для дудосса",
     "severity": "medium",
     "date": "2026-08-12",
     "addedBy": "asddasd"
@@ -93,7 +93,7 @@
     "id": 111,
     "site": "Megacase",
     "title": "хэш git коммита утекают в каждом xhr запросе клиента",
-    "description": "в заголовке baggage каждого xhr от браузера содержится: публичный ключ bugsink (e7a4ef29a008493d9d708cb1a57acff9) хост thisisiriya.bugsink.com 306160c9df9da8efcfd26bb9dbd7ba1f911572dc baggage: sentry-environment=production, sentry-release=306160c9df9da8efcfd26bb9dbd7ba1f911572dc, sentry-public_key=e7a4ef29a008493d9d708cb1a57acff9, sentry-trace_id=c01b540fa9661ea3cdfbad49a0988388 ключ дает возможность засорять фейковыми событиями",
+    "description": "в заголовке baggage каждого xhr от браузера содержится публичный ключ bugsink e7a4ef29a008493d9d708cb1a57acff9 хост thisisiriya.bugsink.com 306160c9df9da8efcfd26bb9dbd7ba1f911572dc baggage sentry-environment=production sentry-release=306160c9df9da8efcfd26bb9dbd7ba1f911572dc sentry-public_key=e7a4ef29a008493d9d708cb1a57acff9 sentry-trace_id=c01b540fa9661ea3cdfbad49a0988388 ключ дает возможность засорять фейковыми событиями",
     "severity": "medium",
     "date": "2026-08-12",
     "addedBy": "asddasd"
@@ -111,7 +111,7 @@
     "id": 101,
     "site": "Megacase",
     "title": "/api/auth/email/signup дудосс вектор",
-    "description": "принимает пароль и можно через пост отправлять запросы, будет нагружаться сервер",
+    "description": "принимает пароль и можно через пост отправлять запросы будет нагружаться сервер",
     "severity": "high",
     "date": "2026-08-04",
     "addedBy": "backd00r"
@@ -129,7 +129,7 @@
     "id": 103,
     "site": "Megacase",
     "title": "megacase.ai/api/ref/validate открыт без авторизации и без лимита",
-    "description": "открыт без авторизации и без лимита, так же дудосс вектор",
+    "description": "открыт без авторизации и без лимита так же дудосс вектор",
     "severity": "high",
     "date": "2026-08-04",
     "addedBy": "backd00r"
@@ -156,7 +156,7 @@
     "id": 106,
     "site": "Megacase",
     "title": "megacase sso сессионные куки раскрывают внутреннюю структуру",
-    "description": "sso.sid connect.sid sso_state sessionid, steamcountury",
+    "description": "sso.sid connect.sid sso_state sessionid steamcountury",
     "severity": "medium",
     "date": "2026-08-04",
     "addedBy": "backd00r"
@@ -165,7 +165,7 @@
     "id": 1,
     "site": "Sleeva",
     "title": "jwt algorithm disclosure на /api/casino/user/balance",
-    "description": "разные alg в bearer - разные ошибки. none пишет signature is missing, hs256 с фейк hmac пишет algorithm is invalid. по тексту ошибок понятно что сервер реально принимает и как валидирует",
+    "description": "разные alg в bearer - разные ошибки none пишет signature is missing hs256 с фейк hmac пишет algorithm is invalid по тексту ошибок понятно что сервер реально принимает и как валидирует",
     "severity": "critical",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -174,7 +174,7 @@
     "id": 2,
     "site": "Sleeva",
     "title": "surrealdb injection в password на signup",
-    "description": "post /api/auth/email/signup тащит password в surrealdb. test123 - 400 password too short, or 1=1 - 400 noscript, union select - 403 waiting for confirm. create/select/define function иногда 201. poc с return array group select email from user тоже 201 ok. если define function реально встала в бд - это уже жесть",
+    "description": "post /api/auth/email/signup тащит password в surrealdb test123 - 400 password too short or 1=1 - 400 noscript union select - 403 waiting for confirm create/select/define function иногда 201 poc с return array group select email from user тоже 201 ok если define function реально встала в бд - это уже жесть",
     "severity": "critical",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -183,7 +183,7 @@
     "id": 3,
     "site": "Sleeva",
     "title": "/api/casino/play/demo обрабатывает до проверки авторизации",
-    "description": "без токена: кривой gameid - 400 invalid game id, нормальный uuid из каталога - 400 internal server error вместо 403. сервер лезет в demo сессию и падает внутри, в traceparent видно что запрос реально крутится",
+    "description": "без токена кривой gameid - 400 invalid game id нормальный uuid из каталога - 400 internal server error вместо 403 сервер лезет в demo сессию и падает внутри в traceparent видно что запрос реально крутится",
     "severity": "high",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -192,7 +192,7 @@
     "id": 4,
     "site": "Sleeva",
     "title": "patch /api/casino/user/settings/username отдает 404",
-    "description": "в бандле маршрут есть, на бэке route not found. ник через api не поменять, но фронт и бэк расходятся",
+    "description": "в бандле маршрут есть на бэке route not found ник через api не поменять но фронт и бэк расходятся",
     "severity": "high",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -201,7 +201,7 @@
     "id": 5,
     "site": "Sleeva",
     "title": "потенциальный idor на балансе через userid в query",
-    "description": "get /api/casino/user/balance?userid=X параметр принимается. без токена 403, но с валидным jwt надо чекнуть чужой userid - если отдаст чужой баланс то idor",
+    "description": "get /api/casino/user/balance?userid=X параметр принимается без токена 403 но с валидным jwt надо чекнуть чужой userid - если отдаст чужой баланс то idor",
     "severity": "high",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -210,7 +210,7 @@
     "id": 6,
     "site": "Sleeva",
     "title": "get /api/payments/crypto/methods без авторизации",
-    "description": "отдает все крипто методы - сети, мин суммы, withdrawal флаги. curl https://sleeva.com/api/payments/crypto/methods",
+    "description": "отдает все крипто методы - сети мин суммы withdrawal флаги curl https //sleeva.com/api/payments/crypto/methods",
     "severity": "high",
     "date": "2026-06-13",
     "addedBy": "backd00r"
@@ -246,7 +246,7 @@
     "id": 10,
     "site": "Sleeva",
     "title": "surrealdb injection подтверждена password field noscript",
-    "description": "поле password при post /api/auth/email/signup напрямую попадает в surrealdb запрос без sanitization. это подтверждается ошибкой surrealdb: разные injection дают разные ответы. password=wildchair - 400 password too short validation, password=or 1=1 - 400 noscript surrealdb error, password=union select - 403 waiting for email confirm (different code path). изменение кода ответа при union означает что запрос частично выполняется и меняет логику аутентификации. требует авторизованного аккаунта для полного exploita через /api/casino/user/settings/username",
+    "description": "поле password при post /api/auth/email/signup напрямую попадает в surrealdb запрос без sanitization это подтверждается ошибкой surrealdb разные injection дают разные ответы password=wildchair - 400 password too short validation password=or 1=1 - 400 noscript surrealdb error password=union select - 403 waiting for email confirm different code path изменение кода ответа при union означает что запрос частично выполняется и меняет логику аутентификации требует авторизованного аккаунта для полного exploita через /api/casino/user/settings/username",
     "severity": "high",
     "date": "2026-06-12",
     "addedBy": "backd00r"
@@ -264,7 +264,7 @@
     "id": 12,
     "site": "Sleeva",
     "title": "opentelemetry traceparent header в каждом ответе",
-    "description": "все http ответы sleeva.com содержат заголовок traceparent с уникальными trace id и span id opentelemetry трассировки. пример: traceparent: 00-416e639fc598c16f49e537e608035fde-0c3213253d5c7027-01. риск: атакующий может коррелировать запросы, отслеживать внутренние цепочки вызовов микросервисов",
+    "description": "все http ответы sleeva.com содержат заголовок traceparent с уникальными trace id и span id opentelemetry трассировки пример traceparent 00-416e639fc598c16f49e537e608035fde-0c3213253d5c7027-01 риск атакующий может коррелировать запросы отслеживать внутренние цепочки вызовов микросервисов",
     "severity": "high",
     "date": "2026-06-11",
     "addedBy": "backd00r"
@@ -273,7 +273,7 @@
     "id": 13,
     "site": "Sleeva",
     "title": "get /api/casino/play/demo?gameid=valid_uuid возвращает 400 internal server error вместо 403",
-    "description": "при использовании реального uuid из каталога возвращает 400 an internal server error occurred вместо 403 authorization header is required. запрос у неавторизованного пользователя идет дальше чем просто краш",
+    "description": "при использовании реального uuid из каталога возвращает 400 an internal server error occurred вместо 403 authorization header is required запрос у неавторизованного пользователя идет дальше чем просто краш",
     "severity": "high",
     "date": "2026-06-11",
     "addedBy": "backd00r"
@@ -290,8 +290,8 @@
   {
     "id": 15,
     "site": "Sleeva",
-    "title": "GET /api/casino/games/:uuid раскрывает данные",
-    "description": "давайте это заблокируем, но по сути больше информационно, но стоит убрать",
+    "title": "GET /api/casino/games/ uuid раскрывает данные",
+    "description": "давайте это заблокируем но по сути больше информационно но стоит убрать",
     "severity": "medium",
     "date": "2026-06-10",
     "addedBy": "backd00r"
@@ -300,7 +300,7 @@
     "id": 16,
     "site": "Sleeva",
     "title": "GET /api/casino/games/filters раскрывает полную структуру маршрутов",
-    "description": "curl https://sleeva.com/api/casino/games/filters",
+    "description": "curl https //sleeva.com/api/casino/games/filters",
     "severity": "medium",
     "date": "2026-06-10",
     "addedBy": "backd00r"
@@ -308,7 +308,7 @@
   {
     "id": 17,
     "site": "Sleeva",
-    "title": "GET /api/casino/tournaments/:id/leaderboard выдает данные без авторизации",
+    "title": "GET /api/casino/tournaments/ id/leaderboard выдает данные без авторизации",
     "description": "",
     "severity": "medium",
     "date": "2026-06-09",
@@ -318,7 +318,7 @@
     "id": 18,
     "site": "Sleeva",
     "title": "GET /api/casino/tournaments/history без авторизации",
-    "description": "полная история без авторизации работает. по сути это сделано для команды, не особо легально, тоже можно закрыть",
+    "description": "полная история без авторизации работает по сути это сделано для команды не особо легально тоже можно закрыть",
     "severity": "medium",
     "date": "2026-06-09",
     "addedBy": "backd00r"
@@ -327,7 +327,7 @@
     "id": 19,
     "site": "Sleeva",
     "title": "/api/payments/methods открыт",
-    "description": "закрыть, потому что вдруг туда будет что-либо добавляться, по типу тест методов",
+    "description": "закрыть потому что вдруг туда будет что-либо добавляться по типу тест методов",
     "severity": "medium",
     "date": "2026-06-09",
     "addedBy": "backd00r"
@@ -336,7 +336,7 @@
     "id": 20,
     "site": "Sleeva",
     "title": "через tanstack router найдены все апи маршруты",
-    "description": "sleeva.com: @post/auth/email/login, @post/auth/email/signup, @post/auth/email/recovery, @post/auth/steam, @post/auth/telegram, @get/casino/user/balance, @get/casino/user/history/deposits, @get/casino/user/history/slots, @post/payments/exchange, @post/casino/tournaments/, @post/casino/user/affiliate/transfer, @patch/casino/user/settings/password",
+    "description": "sleeva.com @post/auth/email/login @post/auth/email/signup @post/auth/email/recovery @post/auth/steam @post/auth/telegram @get/casino/user/balance @get/casino/user/history/deposits @get/casino/user/history/slots @post/payments/exchange @post/casino/tournaments/ @post/casino/user/affiliate/transfer @patch/casino/user/settings/password",
     "severity": "medium",
     "date": "2026-06-05",
     "addedBy": "backd00r"
@@ -345,7 +345,7 @@
     "id": 21,
     "site": "Sleeva",
     "title": "sql like символы в password вызывают ошибку",
-    "description": "бекенд использует surrealdb и sql like символы в password вызывают ошибку, прошу пофиксить",
+    "description": "бекенд использует surrealdb и sql like символы в password вызывают ошибку прошу пофиксить",
     "severity": "medium",
     "date": "2026-06-05",
     "addedBy": "backd00r"
