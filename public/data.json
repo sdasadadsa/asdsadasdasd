@@ -1,5 +1,14 @@
 [
   {
+    "id": 1786989961045,
+    "site": "Megacase",
+    "title": "probe-1786989963",
+    "description": "probe-delete-me",
+    "severity": "low",
+    "date": "2026-08-17",
+    "addedBy": "probe"
+  },
+  {
     "id": 1786547592089,
     "site": "Megacase",
     "title": "/api/statistics?userId=",
