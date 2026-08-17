@@ -1,5 +1,32 @@
 [
   {
+    "id": 1786990139534,
+    "site": "Megacase",
+    "title": "/api/ref/code дудосс вектор",
+    "description": "/api/ref/code так же является дудосс вектором и за 12 смен кода выдает одни 200",
+    "severity": "medium",
+    "date": "2026-08-17",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 1786990139535,
+    "site": "Megacase",
+    "title": "/api/deposit crypto/fk/p2p и др. дудосс векторы",
+    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer. get /api/deposit/crypto/options отдаёт весь каталог сетей, get /api/deposit/crypto/static-wallet?assetCode= выдает адрес — так же эти пути дудосс векторы",
+    "severity": "medium",
+    "date": "2026-08-17",
+    "addedBy": "asddasd"
+  },
+  {
+    "id": 1786990139536,
+    "site": "Megacase",
+    "title": "слабая проверка подписки на получение бонуса",
+    "description": "проверка подписки на получение бонуса слабая, из бандла отправил сам себе конфирм и получил без подписки",
+    "severity": "medium",
+    "date": "2026-08-17",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1786989986187,
     "site": "Megacase",
     "title": "/api/deposit/promocode без лимита",
