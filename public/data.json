@@ -38,8 +38,8 @@
   {
     "id": 1786989986188,
     "site": "Megacase",
-    "title": "обход Fingerprint",
-    "description": "обход Fingerprint",
+    "title": "обход банов от дудосс гуарда",
+    "description": "x-req принимается как visitorid /api/get-auth-url и post /api/giftcard/preview",
     "severity": "high",
     "date": "2026-08-17",
     "addedBy": "asddasd"
