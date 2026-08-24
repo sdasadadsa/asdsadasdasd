@@ -1,5 +1,14 @@
 [
   {
+    "id": 1787586294374,
+    "site": "Sleeva",
+    "title": "ddos sleeva3",
+    "description": "через пост /api/auth/email/recovery все так же",
+    "severity": "medium",
+    "date": "2026-08-24",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1787586277948,
     "site": "Sleeva",
     "title": "ddos sleeva2",
