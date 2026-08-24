@@ -1,5 +1,14 @@
 [
   {
+    "id": 1787584167273,
+    "site": "Sleeva",
+    "title": "ddos sleeva",
+    "description": "/api/casino/games/collections/list нету рейт лимита",
+    "severity": "medium",
+    "date": "2026-08-24",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1786990139534,
     "site": "Megacase",
     "title": "/api/ref/code дудосс вектор",
