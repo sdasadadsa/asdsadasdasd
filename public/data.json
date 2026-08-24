@@ -1,5 +1,14 @@
 [
   {
+    "id": 1787586336501,
+    "site": "Sleeva",
+    "title": "ddos sleeva4",
+    "description": "/api/auth/email/confirm?id={confirmationID}&code={code} \nопт спам кодами нету рейт лимита так же является вектором дудосса",
+    "severity": "medium",
+    "date": "2026-08-24",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1787586294374,
     "site": "Sleeva",
     "title": "ddos sleeva3",
