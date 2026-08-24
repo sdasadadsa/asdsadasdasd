@@ -1,5 +1,14 @@
 [
   {
+    "id": 1787586277948,
+    "site": "Sleeva",
+    "title": "ddos sleeva2",
+    "description": "через post /api/auth/email/signup нету рейт лимита и каких либо ограничений",
+    "severity": "medium",
+    "date": "2026-08-24",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1787584270248,
     "site": "Megacase",
     "title": "ddos mega",
