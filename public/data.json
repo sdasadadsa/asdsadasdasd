@@ -1,5 +1,14 @@
 [
   {
+    "id": 1787584270248,
+    "site": "Megacase",
+    "title": "ddos mega",
+    "description": "/api/sso/auth/steam/return/megacase_ai?openid.mode=error нету рейт лимита , нагружает проект",
+    "severity": "medium",
+    "date": "2026-08-24",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1787584167273,
     "site": "Sleeva",
     "title": "ddos sleeva",
