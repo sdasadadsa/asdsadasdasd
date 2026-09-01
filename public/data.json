@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788274164557,
+    "site": "Megacase",
+    "title": "открытый метод /api/deposit",
+    "description": "через пост /api/deposit выдает инфу и так же нет рейт лимита",
+    "severity": "medium",
+    "date": "2026-09-01",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1787586336501,
     "site": "Sleeva",
     "title": "ddos sleeva4",
