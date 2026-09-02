@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788338612475,
+    "site": "Sleeva",
+    "title": "/api/casino/betting-host /api/casino/restricted-countries /api/payments/currency/detect",
+    "description": "новые векторы на сливе /api/casino/betting-host /api/casino/restricted-countries /api/payments/currency/detect",
+    "severity": "medium",
+    "date": "2026-09-02",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1788274164557,
     "site": "Megacase",
     "title": "открытый метод /api/deposit",
