@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788339063959,
+    "site": "Sleeva",
+    "title": "ddos sleeva",
+    "description": "get /api/casino/games/category/{slots|roulette|blackjack|baccarat|poker|crash|fishing} нету рейт лимита так же нагружает",
+    "severity": "medium",
+    "date": "2026-09-02",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1788338719518,
     "site": "Megacase",
     "title": "принимает айди чужого человека без ошибки",
