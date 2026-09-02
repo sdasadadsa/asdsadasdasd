@@ -1,5 +1,14 @@
 [
   {
+    "id": 1786990139535,
+    "site": "Megacase",
+    "title": "/api/deposit crypto/fk/p2p и др дудосс векторы",
+    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer get /api/deposit/crypto/options отдает весь каталог сетей get /api/deposit/crypto/static-wallet?assetCode= выдает адрес - так же эти пути дудосс векторы",
+    "severity": "medium",
+    "date": "2026-09-02",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1788339063959,
     "site": "Sleeva",
     "title": "ddos sleeva",
@@ -24,15 +33,6 @@
     "description": "новые векторы на сливе /api/casino/betting-host /api/casino/restricted-countries /api/payments/currency/detect",
     "severity": "medium",
     "date": "2026-09-02",
-    "addedBy": "asddasd"
-  },
-  {
-    "id": 1788274164557,
-    "site": "Megacase",
-    "title": "открытый метод /api/deposit",
-    "description": "через пост /api/deposit выдает инфу и так же нет рейт лимита",
-    "severity": "medium",
-    "date": "2026-09-01",
     "addedBy": "asddasd"
   },
   {
@@ -85,15 +85,6 @@
     "site": "Megacase",
     "title": "/api/ref/code дудосс вектор",
     "description": "/api/ref/code так же является дудосс вектором и за 12 смен кода выдает одни 200",
-    "severity": "medium",
-    "date": "2026-08-17",
-    "addedBy": "asddasd"
-  },
-  {
-    "id": 1786990139535,
-    "site": "Megacase",
-    "title": "/api/deposit crypto/fk/p2p и др дудосс векторы",
-    "description": "это так же является дудос вектором /api/deposit crypto / fk / p2p / antilopay / betatransfer / skinify / waxpeer get /api/deposit/crypto/options отдает весь каталог сетей get /api/deposit/crypto/static-wallet?assetCode= выдает адрес - так же эти пути дудосс векторы",
     "severity": "medium",
     "date": "2026-08-17",
     "addedBy": "asddasd"
