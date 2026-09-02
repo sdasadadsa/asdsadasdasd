@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788338719518,
+    "site": "Megacase",
+    "title": "принимает айди чужого человека без ошибки",
+    "description": "через post /api/notifications/read {all:true, userId:1} выдает 200",
+    "severity": "low",
+    "date": "2026-09-02",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1788338612475,
     "site": "Sleeva",
     "title": "/api/casino/betting-host /api/casino/restricted-countries /api/payments/currency/detect",
