@@ -2,6 +2,13 @@
   publish   = "public"
   functions = "netlify/functions"
 
+# functions first — do not let SPA catch them
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
