@@ -9,12 +9,12 @@ from datetime import date
 
 TOKEN     = os.environ.get('GITHUB_TOKEN', '')
 REPO      = 'brjidweoio/sadasddasdsa'
-FILE_PATH = 'fixed.json'
+FILE_PATH = 'public/fixed.json'
 PORT      = 3000
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory='.', **kwargs)
+        super().__init__(*args, directory='public', **kwargs)
 
     def log_message(self, format, *args):
         pass  # quiet
