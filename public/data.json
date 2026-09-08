@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788848599802,
+    "site": "Megacase",
+    "title": "мегакейс подтверждение тг без подписки",
+    "description": "через пост /api/telegram/confirm",
+    "severity": "medium",
+    "date": "2026-09-08",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1786990139535,
     "site": "Megacase",
     "title": "/api/deposit crypto/fk/p2p и др дудосс векторы",
