@@ -1,5 +1,14 @@
 [
   {
+    "id": 1788848770307,
+    "site": "Megacase",
+    "title": "ddos megacaseee",
+    "description": "post /api/purchase \nget /api/giveaways/items\nget /api/balance\nget /api/history/transactions\npost /api/get_upgrade\npost /api/can_upgrade\npost /api/skins/top\npost /api/fair/verify\npost /api/giftcard/redeem\n(все дудосс векторы были проверены не стоит рейт лимит , понятное дело что д-гуард будет отбивать но если спамить то все равно ложиться)",
+    "severity": "critical",
+    "date": "2026-09-08",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1788848599802,
     "site": "Megacase",
     "title": "мегакейс подтверждение тг без подписки",
