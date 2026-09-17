@@ -1,5 +1,14 @@
 [
   {
+    "id": 1789633505052,
+    "site": "Megacase",
+    "title": "сам себе выдаешь streamer права через /api/profile",
+    "description": "через patch /api/profile отправляем {\"isStreamer\"} и обычный пользователь становится стримером . это можно делать и без patchа но тут нету рейт лимита можно убирать эту роль и возвращать",
+    "severity": "medium",
+    "date": "2026-09-17",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1788848770307,
     "site": "Megacase",
     "title": "ddos megacaseee",
