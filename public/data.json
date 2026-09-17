@@ -1,5 +1,14 @@
 [
   {
+    "id": 1789633693035,
+    "site": "Sleeva",
+    "title": "/api/payments/currency",
+    "description": "get /api/payments/currency отдает полный конфиг валют , лимиты депозитов и выводов и другие финансовые настройки",
+    "severity": "medium",
+    "date": "2026-09-17",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1789633599043,
     "site": "Sleeva",
     "title": "cors разрешает localhost с credentials",
