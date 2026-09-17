@@ -1,5 +1,14 @@
 [
   {
+    "id": 1789633539295,
+    "site": "Megacase",
+    "title": "/api/telegram/link без рейт лимита",
+    "description": "через post /api/telegram/link каждый запрос генерирует новый уникальный код для телеграм бота . 15/15 sec",
+    "severity": "medium",
+    "date": "2026-09-17",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1789633505052,
     "site": "Megacase",
     "title": "сам себе выдаешь streamer права через /api/profile",
