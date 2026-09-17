@@ -1,5 +1,14 @@
 [
   {
+    "id": 1789633599043,
+    "site": "Sleeva",
+    "title": "cors разрешает localhost с credentials",
+    "description": "api разрешает origin localhost:3000 и localhost:5173 вместе с access-control-allow-credentials true так же разрешены authorization и post patch put delete",
+    "severity": "low",
+    "date": "2026-09-17",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1789633539295,
     "site": "Megacase",
     "title": "/api/telegram/link без рейт лимита",
