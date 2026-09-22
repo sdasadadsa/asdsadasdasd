@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790084381867,
+    "site": "Sleeva",
+    "title": "/api/payments/deposit",
+    "description": "post /api/payments/deposit так же находится без рейт лимита фин эндпоинт .",
+    "severity": "medium",
+    "date": "2026-09-22",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790084361621,
     "site": "Sleeva",
     "title": "ddos",
