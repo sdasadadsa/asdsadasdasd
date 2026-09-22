@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790084257437,
+    "site": "Megacase",
+    "title": "ddos",
+    "description": "post /api/purchase netu rate limita",
+    "severity": "medium",
+    "date": "2026-09-22",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1789633693035,
     "site": "Sleeva",
     "title": "/api/payments/currency",
