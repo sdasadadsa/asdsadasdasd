@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790084281945,
+    "site": "Megacase",
+    "title": "get/api/history/transactions + /api/balance точно так же",
+    "description": "get/api/history/transactions + /api/balance точно так же",
+    "severity": "medium",
+    "date": "2026-09-22",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790084271650,
     "site": "Megacase",
     "title": "get /api/giveaways/items так же нету рейт лимита и полный дамп",
