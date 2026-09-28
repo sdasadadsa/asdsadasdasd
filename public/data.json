@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790632778110,
+    "site": "Megacase",
+    "title": "get /api/currency/convert без рейт лимита",
+    "description": "get /api/currency/convert без рейт лимита + get /api/currency/convert отдает источник курсов",
+    "severity": "medium",
+    "date": "2026-09-28",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790084381867,
     "site": "Sleeva",
     "title": "/api/payments/deposit",
