@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790633042556,
+    "site": "Megacase",
+    "title": "ddos",
+    "description": "/api/withdraw /api/payout /api/cashout /api/currency/rates /api/ref/me /api/ref/stats /api/ref/earnings /api/cashback /api/cashback/claim /api/bonus/check /api/bonus/claim /api/bonus/daily /api/bonus/telegram /api/settings /api/giveaways /api/giveaways/active /api/giveaways/join /api/giveaways/create /api/giveaways/winners /api/history/games /api/history/deposits /api/history/withdrawals /api/case/list /api/case/popular /api/case/new /api/case/free /api/fair/seeds /api/fair/history /api/upgrade/history /api/chat /api/chat/messages /api/top /api/promo /api/config /api/skins/all нету рейт лимита",
+    "severity": "medium",
+    "date": "2026-09-28",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790632976291,
     "site": "Sleeva",
     "title": "post /api/casino/giveaway/activate",
