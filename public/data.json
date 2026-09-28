@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790632976291,
+    "site": "Sleeva",
+    "title": "post /api/casino/giveaway/activate",
+    "description": "/api/casino/user/notifications /api/casino/user/vip /api/casino/games/popular /api/casino/games/new /api/casino/games/recommended /api/casino/games/live /api/casino/games/bonus /api/casino/games/providers /api/casino/games/jackpot /api/casino/play/session /api/casino/play/active /api/casino/play/history все без рейт лимита",
+    "severity": "medium",
+    "date": "2026-09-28",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790632838272,
     "site": "Sleeva",
     "title": "get /api/casino/games/wins/",
