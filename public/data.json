@@ -1,5 +1,14 @@
 [
   {
+    "id": 1790632838272,
+    "site": "Sleeva",
+    "title": "get /api/casino/games/wins/",
+    "description": "get /api/casino/games/wins/ без рейт лимита",
+    "severity": "medium",
+    "date": "2026-09-28",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790632801531,
     "site": "Sleeva",
     "title": "get /api/auth/email/recovery/confirm",
