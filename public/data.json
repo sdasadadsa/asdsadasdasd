@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791241526332,
+    "site": "Megacase",
+    "title": "/api/can_upgrade",
+    "description": "/api/can_upgrade нет рейт лимита",
+    "severity": "medium",
+    "date": "2026-10-05",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1791241517071,
     "site": "Megacase",
     "title": "/api/get_case",
