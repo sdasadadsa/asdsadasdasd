@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791241551187,
+    "site": "Megacase",
+    "title": "/api/case/activate",
+    "description": "/api/case/activate без рейт лимита",
+    "severity": "medium",
+    "date": "2026-10-05",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1791241526332,
     "site": "Megacase",
     "title": "/api/can_upgrade",
