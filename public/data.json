@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791241608349,
+    "site": "Megacase",
+    "title": "/api/deposit/crypto/static-wallet",
+    "description": "/api/deposit/crypto/static-wallet  создает кош без авторизации и рейт лимита",
+    "severity": "medium",
+    "date": "2026-10-05",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1791241551187,
     "site": "Megacase",
     "title": "/api/case/activate",
