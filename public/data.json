@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791241652857,
+    "site": "Sleeva",
+    "title": "/api/casino/user/balance",
+    "description": "/api/casino/user/balance нет рейт лимита с jwt",
+    "severity": "medium",
+    "date": "2026-10-05",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1791241640659,
     "site": "Megacase",
     "title": "/api/giftcard/redeem",
