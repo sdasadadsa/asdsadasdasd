@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791238825801,
+    "site": "Megacase",
+    "title": "/api/deposit/crypto/options",
+    "description": "нету рейт лимита на /api/deposit/crypto/options",
+    "severity": "medium",
+    "date": "2026-10-05",
+    "addedBy": "asddasd"
+  },
+  {
     "id": 1790633042556,
     "site": "Megacase",
     "title": "ddos",
