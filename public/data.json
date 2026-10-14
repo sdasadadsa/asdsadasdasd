@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791984281506,
+    "site": "Sleeva",
+    "title": "/api/payments/exchange",
+    "description": "/api/payments/exchange обмен без рейт лимита . грузит сервер при большом потоке",
+    "severity": "medium",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791984043554,
     "site": "Sleeva",
     "title": "/api/payments/gift-cards/activate",
