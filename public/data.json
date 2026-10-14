@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791984043554,
+    "site": "Sleeva",
+    "title": "/api/payments/gift-cards/activate",
+    "description": "через post /api/payments/gift-cards/activate можно брутфорсить т.к нету рейтлимита так же создает нагрузку",
+    "severity": "medium",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791983806256,
     "site": "Sleeva",
     "title": "публичный openapi",
