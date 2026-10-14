@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791983806256,
+    "site": "Sleeva",
+    "title": "публичный openapi",
+    "description": "стоит закрыть публичный openapi т.к раскрывает /api/json, /api/yaml т.есть полную крату маршрутов всех apiшек и помогает в дудоссе как минимум",
+    "severity": "medium",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791241652857,
     "site": "Sleeva",
     "title": "/api/casino/user/balance",
