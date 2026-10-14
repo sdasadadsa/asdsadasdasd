@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791984331971,
+    "site": "Sleeva",
+    "title": "ddos",
+    "description": "post /api/casino/user/affiliate/transfer , get /api/casino/user/affiliate/stats , get /api/casino/user/affiliate/history без рейт лимита к ппшке",
+    "severity": "medium",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791984281506,
     "site": "Sleeva",
     "title": "/api/payments/exchange",
