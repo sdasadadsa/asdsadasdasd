@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791984495588,
+    "site": "Megacase",
+    "title": "/api/market/limit",
+    "description": "/api/market/limit отдает лимиты вывода можно закрыть путь что бы игроки не видели",
+    "severity": "low",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791984410279,
     "site": "Sleeva",
     "title": "ddos",
