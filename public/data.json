@@ -1,5 +1,14 @@
 [
   {
+    "id": 1791984410279,
+    "site": "Sleeva",
+    "title": "ddos",
+    "description": "/api/auth/realtime /connection/websocket , выдает канал и сам эндпоинт можно спамить",
+    "severity": "medium",
+    "date": "2026-10-14",
+    "addedBy": "asdsadsad"
+  },
+  {
     "id": 1791984331971,
     "site": "Sleeva",
     "title": "ddos",
