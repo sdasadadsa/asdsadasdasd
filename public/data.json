@@ -1,5 +1,14 @@
 [
   {
+    "id": 1792633973240,
+    "site": "Sleeva",
+    "title": "/api/casino/games/favorites",
+    "description": "/api/casino/user/cashback/weekly/ так же закрыть апи метод",
+    "severity": "medium",
+    "date": "2026-10-22",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1792633945649,
     "site": "Sleeva",
     "title": "/api/casino/user/history/invoices",
