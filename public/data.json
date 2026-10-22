@@ -1,5 +1,14 @@
 [
   {
+    "id": 1792634011551,
+    "site": "Sleeva",
+    "title": "/api/casino/tournaments/33/find",
+    "description": "нету рейт лимита можно спамить через гет /api/casino/tournaments/33/find",
+    "severity": "medium",
+    "date": "2026-10-22",
+    "addedBy": "dsadasasd"
+  },
+  {
     "id": 1792633973240,
     "site": "Sleeva",
     "title": "/api/casino/games/favorites",
