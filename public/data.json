@@ -1,5 +1,14 @@
 [
   {
+    "id": 1793742817023,
+    "site": "Megacase",
+    "title": "обновление по /api/get_roll",
+    "description": "если поставить тело с caseprice 0 кейс начинается искаться по хешу , то есть сразу ошибки не дает и можно просто спамить данными запросами",
+    "severity": "medium",
+    "date": "2026-11-03",
+    "addedBy": "ХОРОШО"
+  },
+  {
     "id": 1793742671322,
     "site": "Megacase",
     "title": "/api/ref/withdraw/all",
