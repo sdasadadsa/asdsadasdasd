@@ -1,5 +1,14 @@
 [
   {
+    "id": 1793742920040,
+    "site": "Megacase",
+    "title": "ПРОШУ ПЕРЕПРОВЕРИТЬ",
+    "description": "через посты /api/auth/realtime /connection/websocket можно их спамить у них нет никакого рейт лимита проверьте это .",
+    "severity": "low",
+    "date": "2026-11-03",
+    "addedBy": "ХОРОШО"
+  },
+  {
     "id": 1793742817023,
     "site": "Megacase",
     "title": "обновление по /api/get_roll",
