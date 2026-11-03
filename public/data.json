@@ -1,5 +1,14 @@
 [
   {
+    "id": 1793742597618,
+    "site": "Megacase",
+    "title": "/api/market/purchase",
+    "description": "через пост можно спамить через апишку покупками скинов по копейкам и от 100 запросов +- идет нагрузка /api/market/purchase",
+    "severity": "medium",
+    "date": "2026-11-03",
+    "addedBy": "ХОРОШО"
+  },
+  {
     "id": 1792634011551,
     "site": "Sleeva",
     "title": "/api/casino/tournaments/33/find",
