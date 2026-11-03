@@ -1,5 +1,14 @@
 [
   {
+    "id": 1793742671322,
+    "site": "Megacase",
+    "title": "/api/ref/withdraw/all",
+    "description": "через патч /api/ref/withdraw/all нету никакого рейт лимита нужна только акт сессия , запрос отдается по сути без проверки и доходит",
+    "severity": "medium",
+    "date": "2026-11-03",
+    "addedBy": "ХОРОШО"
+  },
+  {
     "id": 1793742597618,
     "site": "Megacase",
     "title": "/api/market/purchase",
