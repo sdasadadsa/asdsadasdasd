@@ -1,5 +1,14 @@
 [
   {
+    "id": 1794904281984,
+    "site": "Megacase",
+    "title": "https://megacase.ai/api/live-drop?limit=100&filter=all",
+    "description": "через get api/live-drop?limit=100&filter=all выдает стату без авторизации можно делать нагрузку на сайт . я понимаю что это дроп лента но лимиты можно ставить разные и сам проверил что серьезно дает нагрузку при многозадачности",
+    "severity": "medium",
+    "date": "2026-11-17",
+    "addedBy": "вввв"
+  },
+  {
     "id": 1794594438066,
     "site": "Sleeva",
     "title": "ПРО ТУРНИРЫ (НЕ УЯЗВ)",
