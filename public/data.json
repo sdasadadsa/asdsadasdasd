@@ -1,5 +1,14 @@
 [
   {
+    "id": 1794904767236,
+    "site": "Megacase",
+    "title": "get /api/cases/my",
+    "description": "вообще нету никакого рейт лимита на get /api/cases/my тоже нагружает сайт при многих запросах",
+    "severity": "medium",
+    "date": "2026-11-17",
+    "addedBy": "вввв"
+  },
+  {
     "id": 1794904719045,
     "site": "Megacase",
     "title": "get api/case/current",
